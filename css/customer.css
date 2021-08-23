@@ -1,0 +1,370 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+/* Navbar */
+
+.header {
+    width: 100%;
+    position: absolute;
+}
+
+.header .container {
+    margin: auto;
+    max-width: 92%;
+}
+
+.menu {
+    width: 25px;
+    display: none;
+    margin-left: 20px;
+}
+
+#navbar {
+    position: relative;
+    background-color: transparent;
+    animation: showNow 0.6s normal;
+}
+
+.navbar .logo img {
+    width: 120px;
+}
+
+@keyframes showNow {
+    0% {
+      bottom: 30px;
+    }
+    50% {
+      bottom: 0px;
+    }
+}
+
+#navbar .col-1 ul {
+    padding: 0px;
+}
+
+#navbar .col-1 li {
+    list-style: none;
+    padding: 15px 0px;
+    border-bottom: 1px solid black;
+}
+
+#navbar .col-1 a {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    padding-top: 15px;
+}
+
+.pages {
+    flex: 1;
+    text-align: right;
+}
+
+.pages ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.pages ul li a {
+    padding: 7px;
+    color: #fff;
+    text-align: center;
+    margin-right: 20px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+.pages ul li a:hover {
+    border-color: #fff;
+}
+
+.header .container .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header .container .row .col-1 {
+    flex-basis: 45%;
+    margin-bottom: 50px;
+}
+
+.header .container .row .col-1 h1 {
+    font-size: 45px;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+
+.header .container .row .col-1 img {
+    max-width: 100%;
+}
+
+.header .container .row .col-1 button, .offer .row .col-2 button {
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 30px;
+    padding: 8px 30px;
+    text-align: center;
+    border-radius: 30px;
+    background-color: #ff523b;
+}
+
+.header .container .row .col-1 button:hover, .offer .row .col-2 button:hover {
+    color: #ff523b;
+    background-color: white;
+}
+
+.header .container .row .col-1 button:focus, .offer .row .col-2 button:focus {
+    outline: none;
+}
+
+.banner {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    justify-content: center;
+    background-image: url(../assets/images/customer-banner.jfif);
+}
+
+.banner div {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding-top: 70px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.banner div h1 {
+    margin: 0px;
+    font-size: 72px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #04AA6D;
+}
+
+.banner div h2 {
+    color: #fff;
+    font-size: 42px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0px 0px 10px;
+}
+
+.banner div a {
+    transition: 0.3s;
+    padding: 10px 30px;
+    color: #04AA6D;
+    text-decoration: none;
+    border: 1px solid #04AA6D;
+}
+
+.banner div a:hover {
+    color: #fff;
+    transition: 0.3s;
+    background-color: #04AA6D;
+}
+
+.heading {
+    width: 100%;
+    font-size: 32px;
+    text-align: center;
+    margin: 70px 0px 0px;
+}
+
+.heading + hr {
+    margin: auto;
+    opacity: 0.9;
+    max-width: 70px;
+    margin-top: 10px;
+    margin-bottom: 80px;
+    border: 2px solid #04AA6D;
+}
+
+.products {
+    margin: auto;
+    display: flex;
+    max-width: 75%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products > div {
+    width: 250px;
+    margin: auto;
+    overflow: hidden;
+    max-height: 385px;
+    margin-bottom: 70px;
+}
+
+.products > div::-webkit-scrollbar {
+    width: 0px;
+}
+  
+.products > div::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.products > div img {
+    width: 100%;
+    height: 330px;
+}
+
+.products > div h4 {
+    margin: 0px;
+    font-size: 16px;
+    margin: 10px 0 5px 0;
+}
+
+.products > div div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products > div span {
+    font-size: 14px;
+}
+
+.products > div a {
+    font-size: 14px;
+    color: #04AA6D;
+}
+
+.products > div p {
+    font-size: 12px;
+}
+
+.products > div button {
+    color: #04AA6D;
+    transition: 0.3s;
+    font-size: 12px;
+    padding: 5px 25px;
+    border-radius: 50px;
+    margin-bottom: 5px;
+    background: transparent;
+    border: 1px solid #04AA6D;
+}
+
+.products > div button:hover {
+    color: #fff;
+    transition: 0.3s;
+    background: #04AA6D;
+}
+
+/* Footer */
+
+.footer {
+    color: #fff;
+    padding: 60px;
+    margin-top: 80px;
+    padding-bottom: 30px;
+    background-color: black;
+}
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer .row .col-1 img {
+    margin-top: 15px;
+}
+
+.footer .col-1, .footer .col-2, .footer .col-3, .footer .col-4  {
+    height: 150px;
+    min-width: 220px;
+    margin-bottom: 30px;
+}
+
+.footer .col-1 h4, .footer .col-1 p {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.footer .row .col-1, .footer .row .col-2 {
+    flex-basis: 20%;
+}
+
+.footer .row .col-3, .footer .row .col-4 {
+    flex-basis: 15%;
+    text-align: center;
+}
+
+.footer .col-3 li a, .footer .col-4 li a {
+    color: gray;
+    text-decoration: none;
+}
+
+.footer p, .footer ul {
+    padding: 0px;
+    color: gray;
+    font-size: 12px;
+    list-style: none;
+}
+
+/* Copyright */
+
+.copyright {
+    color: gray;
+    font-size: 13px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar {
+        align-items: center;
+        padding: 15px 0px 0px;
+    }
+    .menu {
+        display: inline-block;
+    }
+    .pages {
+        display: none;
+    }
+    .others {
+        flex: 1;
+        text-align: right;
+    }
+    .footer .row .col-3 {
+        height: 125px;
+    }
+    .banner div h1 {
+        font-size: 42px;
+    }
+    .banner div h2 {
+        font-size: 22px;
+        line-height: 36px;
+    }
+    .banner div a {
+        padding: 7px 30px;
+    }
+    #auth-body .container {
+        width: 100%;
+    }
+    .signupbtn {
+        margin: 0px;
+        padding: 10px 20px;
+    }
+}

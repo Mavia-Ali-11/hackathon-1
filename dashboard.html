@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/dasboard.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <input type="checkbox" id="nav-toggle">
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h2><span class="las la-utensils" id="logo"></span><span id="resnamedb">Restaurant</span></h2>
+        </div>
+
+        <div class="sidebar-menu">
+            <ul>
+                <li onclick="changeTabs(0)">
+                    <a href="javascript:void(0)" class="active tabLink"><span class="las la-home"></span><span
+                            style="position: absolute;">Home</span></a>
+                </li>
+                <li onclick="changeTabs(1)">
+                    <a href="javascript:void(0)" class="tabLink"><span class="las la-spinner"></span><span
+                            style="position: absolute;">Pending</span></a>
+                </li>
+                <li onclick="changeTabs(2)">
+                    <a href="javascript:void(0)" class="tabLink"><span class="las la-check-double"></span><span
+                            style="position: absolute;">Accepted</span></a>
+                </li>
+                <li onclick="changeTabs(3)">
+                    <a href="javascript:void(0)" class="tabLink"><span class="las la-truck"></span><span
+                            style="position: absolute;">Delivered</span></a>
+                </li>
+                <li>
+                    <button class="signout" onclick="signout()">Sign out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="company">
+        <h1><span class="las la-laptop-code"></span>Soft Studios</h1>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h2>
+                <label for="nav-toggle" style="cursor: pointer;">
+                    <span class="las la-bars"></span>
+                </label>
+                Pak Foods
+            </h2>
+
+            <div class="search-wrapper">
+                <span class="las la-search"></span>
+                <input type="search" placeholder="Search here">
+            </div>
+
+            <div class="user-wrapper">
+                <img src="assets/images/avatar.png" width="52px">
+                <div>
+                    <h4>Mavia Ali</h4>
+                    <small>Super admin</small>
+                </div>
+            </div>
+        </header>
+
+        <div class="tabSections">
+            <div class="cards">
+                <div class="card-single">
+                    <div>
+                        <h1>54</h1>
+                        <span>Customers</span>
+                    </div>
+                    <div>
+                        <span class="las la-users"></span>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div>
+                        <h1>79</h1>
+                        <span>Projects</span>
+                    </div>
+                    <div>
+                        <span class="las la-clipboard-list"></span>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div>
+                        <h1>79</h1>
+                        <span>Orders</span>
+                    </div>
+                    <div>
+                        <span class="las la-shopping-bag"></span>
+                    </div>
+                </div>
+
+                <div class="card-single highlight">
+                    <div>
+                        <h1>$6k</h1>
+                        <span>Income</span>
+                    </div>
+                    <div>
+                        <span class="lab la-google-wallet"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-header addDishTitle">
+                <h2>Your Items</h2>
+            </div>
+            <div class="cards addDish">
+                <div class="card-single" type="button" data-toggle="modal" data-target="#exampleModalLong">
+                    <i class="las la-plus"></i>
+                    <h4>Add Dish</h4>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="tabSections" hidden>
+            <div class="cards">
+                <div class="card-single">
+                    <div>
+                        <h1>54</h1>
+                        <span>Customers</span>
+                    </div>
+                    <div>
+                        <span class="las la-users"></span>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div>
+                        <h1>79</h1>
+                        <span>Projects</span>
+                    </div>
+                    <div>
+                        <span class="las la-clipboard-list"></span>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div>
+                        <h1>79</h1>
+                        <span>Orders</span>
+                    </div>
+                    <div>
+                        <span class="las la-shopping-bag"></span>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div>
+                        <h1>$6k</h1>
+                        <span>Income</span>
+                    </div>
+                    <div>
+                        <span class="lab la-google-wallet"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-grid">
+                <div class="projects">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Recent Projects</h2>
+                            <button>See all <span class="las la-arrow-right"></span></button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responive">
+                                <table width="100%">
+                                    <thead>
+                                        <tr>
+                                            <td>Project Title</td>
+                                            <td>Department</td>
+                                            <td>Status</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>UI/UX Design</td>
+                                            <td>Frontend Team</td>
+                                            <td>
+                                                <span class="status purple"></span>Review
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Web Development</td>
+                                            <td>MERN Stack Team</td>
+                                            <td>
+                                                <span class="status pink"></span>Working
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Delivery App</td>
+                                            <td>Mobile App Team</td>
+                                            <td>
+                                                <span class="status orange"></span>Pending
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Database Designs</td>
+                                            <td>Backend Team</td>
+                                            <td>
+                                                <span class="status purple"></span>Review
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Templates Conversion</td>
+                                            <td>Frontend Internees</td>
+                                            <td>
+                                                <span class="status pink"></span>Working
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Graphics Designing</td>
+                                            <td>GFX Team</td>
+                                            <td>
+                                                <span class="status orange"></span>Pending
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="customers">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>New Customers</h4>
+                            <button id="customerBtn">See all <span class="las la-arrow-right"></span></button>
+                        </div>
+
+                        <div class="card-body p-0">
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="assets/images/ziyad.jpg" width="40px" height="40px">
+                                    <div>
+                                        <h4>Mirza Ziyad Beyg</h4>
+                                        <small>CEO Linux</small>
+                                    </div>
+                                </div>
+
+                                <div class="contact">
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="assets/images/salman.jpg" width="40px" height="40px">
+                                    <div>
+                                        <h4>Muhammad Salman</h4>
+                                        <small>CEO Microsoft</small>
+                                    </div>
+                                </div>
+
+                                <div class="contact">
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="assets/images/aniq.jpg" width="40px" height="40px">
+                                    <div>
+                                        <h4>Muhammad Aniq</h4>
+                                        <small>CEO Adobe</small>
+                                    </div>
+                                </div>
+
+                                <div class="contact">
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="assets/images/avatar.png" width="40px" height="40px">
+                                    <div>
+                                        <h4>Mavia Ali</h4>
+                                        <small>CEO Amazon</small>
+                                    </div>
+                                </div>
+
+                                <div class="contact">
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="assets/images/saif.jpg" width="40px" height="40px">
+                                    <div>
+                                        <h4>Muhammad Saif</h4>
+                                        <small>CEO Apple</small>
+                                    </div>
+                                </div>
+
+                                <div class="contact">
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="assets/images/hammad.jpg" width="40px" height="40px">
+                                    <div>
+                                        <h4>Muhammad Hammad</h4>
+                                        <small>CEO NASA</small>
+                                    </div>
+                                </div>
+
+                                <div class="contact">
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="assets/images/sherry.jpg" width="40px" height="40px">
+                                    <div>
+                                        <h4>Muhammad Shaheryar</h4>
+                                        <small>CEO Facebook & Co.</small>
+                                    </div>
+                                </div>
+
+                                <div class="contact">
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="assets/images/hamza.jpg" width="40px" height="40px">
+                                    <div>
+                                        <h4>Muhammad Hamza</h4>
+                                        <small>CEO Google</small>
+                                    </div>
+                                </div>
+
+                                <div class="contact">
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabSections" hidden>
+            <h1>Accepted</h1>
+        </div>
+
+        <div class="tabSections" hidden>
+            <h1>Delivered</h1>
+        </div>
+    </div>
+
+    <!-- Add dish popup -->
+
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" style="min-width: 85%;" role="document">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-header border-0">
+                    <button type="button" class="close pr-0" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="position: absolute;
+                          top: 0px;
+                          right: 0px;"><i class="las la-times" style="color: #fff;"></i></span>
+                    </button>
+                </div>
+                <div class="container main">
+                    <div class="row">
+                        <div class="col-12 col-md-5 addDishImg"></div>
+                        <div class="col-12 col-md-7 signupForm">
+                            <h1>Add Dish</h1>
+                            <h4>Add new dish to your restaurant</h4>
+                            <p>This will add new item in your profile for users.</p>
+
+                            <hr>
+
+                            <label for="itemName"><b>Item Name</b></label>
+                            <input type="text" id="itemName" placeholder="Item Name" name="itemName" required>
+
+                            <label for="price"><b>Price (Rs)</b></label>
+                            <input type="number" id="price" placeholder="Price" name="price" required>
+
+                            <label for="foodCategory"><b>Food Category</b></label>
+                            <select id="foodCategory" name="foodCategory" onchange="swapCities(this)">
+                                <option value="Pakistani">Pakistani</option>
+                                <option value="Chinese">Chinese</option>
+                                <option value="Pakistan" selected>Italian</option>
+                                <option value="French">French</option>
+                            </select>
+
+                            <label for="deliveryType"><b>Delivery Type</b></label>
+                            <select id="deliveryType" name="deliveryType" onchange="swapCities(this)">
+                                <option value="Free" selected>Free</option>
+                                <option value="Paid">Paid</option>
+                            </select>
+
+                            <div class="clearfix">
+                                <button class="signupbtn" onclick="addDishToMenu()">Add <i
+                                        class="las la-plus"></i></button>
+                            </div>
+
+                            <br>
+
+                            <p>Already have an account? <a href="signin.html" style="color:dodgerblue">Sign In</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyCRek5DWCKx6xEyRZvVyIq5KKdSuQdzjnA",
+            authDomain: "saylani-smit.firebaseapp.com",
+            projectId: "saylani-smit",
+            storageBucket: "saylani-smit.appspot.com",
+            messagingSenderId: "357285230181",
+            appId: "1:357285230181:web:e630acab3e79eb335e388c",
+            measurementId: "G-BET4R37J04"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <script src="./js/app.js"></script>
+
+    <script>
+        checkUserScopes();
+    </script>
+</body>
+
+</html>

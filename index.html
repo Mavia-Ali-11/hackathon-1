@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Register account</title>
+</head>
+
+<body>
+    <div class="container main">
+        <div class="row">
+            <div class="col-12 col-md-5"></div>
+            <div class="col-12 col-md-7 signupForm">
+                <h1>Pak Foods</h1>
+                <h4>Register your account</h4>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+
+                <label for="userRole"><b>Sign up as</b></label><br>
+
+                <input type="radio" id="userRole" checked="checked" name="userRole" value="restaurant"
+                    onchange="swapRoles(this)">
+                <span class="checkmark">Restaurant</span>
+
+                <input type="radio" name="userRole" value="customer" onchange="swapRoles(this)">
+                <span class="checkmark">User / Customer</span>
+
+                <br>
+
+                <div id="restaurantWrapper">
+                    <label for="resName"><b>Restaurant Name</b></label>
+                    <input type="text" id="resName" placeholder="Restaurant Name" name="resName" required>
+                </div>
+
+                <div class="cutsomerWrapper" hidden>
+                    <label for="username"><b>Username</b></label>
+                    <input type="text" id="username" placeholder="Enter Username" name="username" required>
+                </div>
+
+                <label for="emailInp"><b>Email</b></label>
+                <input type="text" id="emailInp" placeholder="Enter Email" name="email" required>
+
+                <div class="cutsomerWrapper" hidden>
+                    <label for="phonenum"><b>Phone Number</b></label>
+                    <input type="number" id="phonenum" placeholder="Enter Phone" name="username" required>
+                </div>
+
+                <label for="country"><b>Country</b></label>
+                <select id="country" name="country" onchange="swapCities(this)">
+                    <option value="India">India</option>
+                    <option value="Pakistan" selected>Pakistan</option>
+                    <option value="Saudia Arabia">Saudia Arabia</option>
+                    <option value="UAE">UAE</option>
+                </select>
+
+                <label for="cities"><b>City</b></label>
+
+                <select id="cities" class="cities" name="cities">
+                    <option value="Karachi" selected>Karachi</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Lahore">Lahore</option>
+                    <option value="Islamabad">Islamabad</option>
+                    <option value="Peshawer">Peshawer</option>
+                </select>
+
+                <select id="cities" class="cities" name="cities" hidden>
+                    <option value="Mumbai" selected>Mumbai</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Banglore">Banglore</option>
+                    <option value="Ratnagiri">Ratnagiri</option>
+                </select>
+
+                <select id="cities" class="cities" name="cities" hidden>
+                    <option value="Makkah" selected>Makkah</option>
+                    <option value="Madinah">Madinah</option>
+                    <option value="Jaddah">Jaddah</option>
+                    <option value="Dammam">Dammam</option>
+                    <option value="Riyadh">Riyadh</option>
+                </select>
+
+                <select id="cities" class="cities" name="cities" hidden>
+                    <option value="Dubai" selected>Dubai</option>
+                    <option value="Sharjah">Sharjah</option>
+                    <option value="Abu Dhabi">Abu Dhabi</option>
+                </select>
+
+                <label for="passwordInp"><b>Password</b></label>
+                <input type="password" id="passwordInp" placeholder="Enter Password" name="psw" required>
+
+                <label for="pswRepeat"><b>Repeat Password</b></label>
+                <input type="password" id="pswRepeat" placeholder="Repeat Password" name="psw-repeat" required>
+
+                <div class="clearfix">
+                    <button class="signupbtn" onclick="signup()">Sign Up</button>
+                </div>
+
+                <br>
+
+                <p>Already have an account? <a href="signin.html" style="color:dodgerblue">Sign In</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyCRek5DWCKx6xEyRZvVyIq5KKdSuQdzjnA",
+            authDomain: "saylani-smit.firebaseapp.com",
+            projectId: "saylani-smit",
+            storageBucket: "saylani-smit.appspot.com",
+            messagingSenderId: "357285230181",
+            appId: "1:357285230181:web:e630acab3e79eb335e388c",
+            measurementId: "G-BET4R37J04"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
